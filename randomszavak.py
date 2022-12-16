@@ -41,6 +41,8 @@ legnagyobb = max(l)
 egyseg = 80//legnagyobb
 for e in l:
     print("*"*(e*egyseg))
+pass
+
 
 
 

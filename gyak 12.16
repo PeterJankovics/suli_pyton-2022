@@ -1,0 +1,2 @@
+szam = int(input("kerek 3 jegyu szamot"))
+print(szam)
