@@ -1,4 +1,4 @@
-#Ez a függvény bekér egy szót, és annak jelentését.
+#AEz a függvény bekér egy szót, és annak jelentését.
 #Visszaad: a két bekérés listában
 import random
 def szoBeker():
@@ -41,22 +41,73 @@ def beolvas():
 
 def kerdez():
     valasztott = random.choice(kerdesek)    
-    print(valasztott)
+
     rossz = []
     for i in range(3):
         temp = random.choice(kerdesek)
-        print(temp)
-        while temp not in rossz and temp != valasztott :
-            rossz.append(temp)
-        print(rossz)    
+        
+        while not(temp not in rossz and temp != valasztott): 
+            temp = random.choice(kerdesek)    
+        rossz.append(temp)
+        #print("rossz",rossz)    
     print("-"*100)
     print("Mit jelent: " + valasztott[0] + "?")
 
     rossz.append(valasztott)
-        
+    #valasz bekeres
+    abc = "abcdefghijklmnopqrstuvwxyz"
+random.shuffle(rossz)
+    i = 0
+    for e in rossz:
+        print(abc[i]", "+e[1])
+        i += 1
+    valasz = input("valassz: ")
+    hol = 4
+    while hol >= 4:
+        try:
+            if valasz != "":
+                hol = abc.index(valasz)               
+        except:
+            valasz = input("valassz ujra!! ")
+        else:
+            if hol >= 4:
+                valasz = input("valassz ujra!! ")
 
-beolvas()
-kerdez()
+    #if valasztott[0] == rossz[hol][0]:
+    #    print("Helyes :)")
+    #else:
+    #    print("Rossz valasz")
+    return valasztott[0] == rossz[hol][0]
+
+def menu():
+    beker = ""
+    while beker != "0":
+        print("-"*40)
+        print("Szotar program\n")
+        print("1: Szavak bevitele")
+        print("2: Feleltetes")
+        print("0: Kilepes")
+        beker = input("valasz: ")
+    
+        if beker == "1":
+            szavak = sokbeker()
+            filebair(szavak)
+        elif beker == "2":
+            #feleltetés                
+            beolvas()
+            lil_A = []
+            for i in range(10):
+                lil_A.append(kerdez())
+    
+            #print(lil_A)
+
+            print("Az eredmény:{:.0%}".format(lil_A.count(True)/len(lil_A)))
+
+                
+            
+menu()
+
+
 
 #szavak=sokBeker()
 #filebaIr(szavak)
