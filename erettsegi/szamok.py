@@ -11,3 +11,29 @@ for sor in f:
 f.close()
 print("2. feladat")
 print("Az adatfile-ban " + str(len(kerdesek)) + " Kerdes van")
+
+
+matek = []
+
+for e in kerdesek:
+    if e[3] == "matematika":
+        matek.append(e[2])
+print("Az adatfajlban " + str(len(matek)) +
+      "  matematika feladat van, pontot er " + str(matek.count(1)) +
+      " feladat, 2 pontot er " + str(matek.count(2)) +
+      " feladat, 3 pontot er " + str(matek.count(3)) + " feladat.")
+
+
+valaszok = []
+for e in kerdesek:
+    valaszok.append(e[1])
+
+print("A valaszok számértéke {}-től {}-ig tart.".format(min(valaszok),max(valaszok)))    
+
+
+
+
+
+
+
+
