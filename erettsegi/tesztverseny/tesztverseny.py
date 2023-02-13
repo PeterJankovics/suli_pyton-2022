@@ -15,8 +15,8 @@ def pontszamit(valasz, helyes):
             
 f = open("valaszok.txt","r")
 print("1. feladat:")
-adatok = f.read().split("\n")
-adatok.remove("")
+
+adatok = f.read().split("\n")[:-1]
 f.close()
 # print(adatok)
 
@@ -66,21 +66,26 @@ for e in valaszok:
 print("A feladatra {0} fő, a versenyzők {1:.2%}-a adott helyes választ".format(db, db/len(valaszok)))        
 
 f = open("pontok.txt","w")
+eredmenyek = []
 
 for e in valaszok:
     pont = pontszamit(e[1],helyes)
     f.write(e[0] + " " + str(pont) + "\n")
-    
+    eredmenyek.append([pont, e[0]])    
 f.close()
 
 
 
+# eredmenyek.sort()
+# eredmenyek.reverse()
+# print(eredmenyek[:10])
+csakpontok = set({})
 
+for e in eredmenyek:
+    csakpontok.add(e[0])
+    
 
-
-
-
-
+print(csakpontok[-3:])
 
 
 
