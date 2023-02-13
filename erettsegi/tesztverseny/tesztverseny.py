@@ -6,11 +6,15 @@ def pontszamit(valasz, helyes):
                 pont += 3
             elif sorszam < 10:
                 pont += 4
-                
+            elif sorszam < 14:
+                pont += 5
+            else:
+                pont += 6
+    return pont                        
 
             
 f = open("valaszok.txt","r")
-print("1. fladat:")
+print("1. feladat:")
 adatok = f.read().split("\n")
 adatok.remove("")
 f.close()
@@ -65,6 +69,8 @@ f = open("pontok.txt","w")
 
 for e in valaszok:
     pont = pontszamit(e[1],helyes)
+    f.write(e[0] + " " + str(pont) + "\n")
+    
 f.close()
 
 
