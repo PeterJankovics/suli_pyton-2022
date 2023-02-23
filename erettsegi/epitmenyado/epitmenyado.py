@@ -37,4 +37,26 @@ else:
         print("{} utca {}".format(e[1],e[2]))
 
 hazaka = [e for e in hazak if e [3] == "A"]
+hazakb = []
+for e in hazak:
+    if e[3] == "B":
+        hazakb.append(e)
+
+hazak = [e for e in hazak if e[3] == "C"]
+        
+for i in range(len(hazaka)):
+    hazaka[i].append(ado(hazaka[i][3],int(hazaka[i][4])))
+
+for i in range(len(hazakb)):
+    hazakb[i].append(ado(hazakb[i][3],int(hazakb[i][4])))
+
+for i in range(len(hazakc)):
+    hazakc[i].append(ado(hazakc[i][3],int(hazakc[i][4])))    
+
+    
+
+print(hazaka, hazakb, hazakc)    
+
+    
+
 
