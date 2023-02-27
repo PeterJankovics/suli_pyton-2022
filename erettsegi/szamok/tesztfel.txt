@@ -1,0 +1,11 @@
+2 8 Hany oldallapja van az oktaedernek?
+3 6437 Hany km hosszu az Amazonas?
+2 120 Mennyi 5 faktorialisa?
+2 2 Hanyadik az orszagok terulet szerinti rangsoraban Kanada?
+3 3 Mennyi 1000 tizes alapu logaritmusa?
+3 6370 Mennyi a Fold atlagos sugara (10 km-re kerekitve)?
+3 1336 Mikor vezette be Karoly Robert a kapuadot?
+1 1514 Melyik evben volt a Dozsa-fele parasztfelkeles?
+3 1937 Melyik evben vezettek be Magyarorszagon a 8 oras munkaidot?
+2 93030 Hany negyzetkilometer Magyarorszag terulete?
+A feladatokra osszesen 24 pont adhato. 
