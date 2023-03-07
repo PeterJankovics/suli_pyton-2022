@@ -49,7 +49,7 @@ for e in hibakodok:
     for o in naplo:
         if o[3] == e:
             temp.append(e)
-    print(len(e))        
+print(len(e))        
 
 
 
