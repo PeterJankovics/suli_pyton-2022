@@ -53,8 +53,6 @@ for i in range(len(hazakb)):
 for i in range(len(hazakc)):
     hazakc[i].append(ado(hazakc[i][3],int(hazakc[i][4])))    
 
-    
-
 print(hazaka, hazakb, hazakc)    
 
     

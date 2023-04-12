@@ -20,6 +20,10 @@ canvas.create_line(180,180,180,90, fill="green", width=5)
 canvas.create_line(90,90,180,90, fill="orange", width=5)
 
 
-canvas.create_line(300,90,480,210, fill="purple", width=5)
-canvas.create_line(90,200,180,200, fill="purple", width=5)
+canvas.create_line(300,90,380,210, fill="blue", width=5)
+canvas.create_line(300,90,220,210, fill="purple", width=5)
+canvas.create_line(220,210,380,210, fill="brown", width=5)
+
+
+
 win.mainloop()
