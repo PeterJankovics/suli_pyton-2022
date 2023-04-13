@@ -25,5 +25,6 @@ canvas.create_line(300,90,220,210, fill="purple", width=5)
 canvas.create_line(220,210,380,210, fill="brown", width=5)
 
 
+canvas.create_line(500,90,500,90, fill="blue", width=5)
 
 win.mainloop()
