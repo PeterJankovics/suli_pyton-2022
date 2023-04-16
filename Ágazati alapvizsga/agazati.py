@@ -1,6 +1,11 @@
 print("1. feladat")
 
-szoveg = input("Kerek egy szöveget: ")
+szoveg = 0
+while type(szoveg) != str:
+    try:
+        szoveg = str(input("Kerek egy szoveget: "))
+    except:
+        print("Ez nem egy szoveg!!")
 szam = ""
 while type(szam) != int: 
     try:
@@ -10,4 +15,4 @@ while type(szam) != int:
 try:    
     print(szoveg[szam -1]*szam)
 except:
-    print("Nincs ilyen betű!")
+    print("Nincs ennyi betu!!")
