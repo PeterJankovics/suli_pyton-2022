@@ -1,27 +1,6 @@
 # Import the required libraries
 from tkinter import *
 import math
-
-class forgato():
-    canvas = 0
-    vonalak = []
-    def __init__(self, canvas, vonalak):
-        self.canvas = canvas
-        self.vonalak = vonalak
-    def rajzol(self):
-        canvas.delete("all")
-        #szog += .1
-        #print(szog)
-        for betu in self.vonalak:
-            betu = nagyit(betu, 1)
-            betu = eltol(betu, -kozep[0], -kozep[1])
-            betu = forgat(betu, szog)
-            betu = eltol(betu, 250, 250)
-            betu = eltol(betu, kozep[0], kozep[1])
-            self.canvas.canvas.create_line(betu, fill="blue", width=3)
-            
-    
-
 def eltol(pontok, x, y):
     vissza = []
     for i, pont in enumerate(pontok):
@@ -87,8 +66,6 @@ PETER = [[0,0,90,0, 90,10,100,10, 100,30,100,70, 100,80,90,80, 90,90,40,90, 40,9
           490,140,490,80, 490,80,480,80, 480,80,480,140, 480,140,440,140, 440,140,440,0,], [495,47,495,30, 495,30,480,30, 480,30,480,47, 480,47,495,47]]
                          
 
-
-elso = forgato(canvas, PETER)
 """canvas.create_line(P, fill="green", width=10)"""
 """p1 = eltol(P, 10, 10)
 p2 = eltol (P2, 10 ,10)
@@ -115,9 +92,18 @@ kozep[0] /= db
 kozep[1] /= db
 szog = 0
 while True:
-    elso.rajzol()
-    win.update_idletasks()
-    win.update()
+    canvas.delete("all")
+    szog += .1
+    print(szog)
+    for betu in PETER:
+        betu = nagyit(betu, 1)
+        betu = eltol(betu, -kozep[0], -kozep[1])
+        betu = forgat(betu, szog)
+        betu = eltol(betu, 250, 250)
+        betu = eltol(betu, kozep[0], kozep[1])
+        canvas.create_line(betu, fill="blue", width=3)
+        win.update_idletasks()
+        win.update()
     #win.mainloop()
 
 
