@@ -25,7 +25,17 @@ class forgato():
             betu = self.eltol(betu, 325, 300)
             betu = self.eltol(betu, self.kozep[0], self.kozep[1])
             self.canvas.create_line(betu, fill=self.szinek[i], width=3)
-            
+    def betol(self):
+        canvas.delete("all")
+        self.szog += self.szogsebesseg
+
+        self.voalak[0] = self.elstol(self.vonalak[0], 0, 0)
+        self.voalak[1] = self.elstol(self.vonalak[1], 900, 0)
+        self.voalak[2] = self.elstol(self.vonalak[2], 0, 0)
+        self.voalak[4] = self.elstol(self.vonalak[4], 0, 0)
+        self.voalak[5] = self.elstol(self.vonalak[5], 0, 0)
+        self.voalak[6] = self.elstol(self.vonalak[6], 0, 0)
+        
     def eltol(self, pontok, x, y):
         vissza = []
         for i, pont in enumerate(pontok):
@@ -69,7 +79,7 @@ class forgato():
 win=Tk()
 
 # Set the size of the tkinter window
-win.geometry("1280x720")
+win.geometry("900x900")
 
 # Create a canvas widget
 canvas=Canvas(win, width=1280, height=720)
@@ -109,7 +119,7 @@ while True:
     #win.mainloop()
 
 
-
+elso.betol()
 #for betu in PETER:
  #   betu = forgat(betu, 10)
   #  canvas.create_line(PETER, fill="blue", width=5)
