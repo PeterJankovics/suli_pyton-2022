@@ -21,6 +21,7 @@ table{
 .lablec a:hover {
     font-style: italic;
     text-decoration: none;
+    color: black;
 }
 p{
     text-align: justify;
