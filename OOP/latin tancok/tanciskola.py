@@ -31,7 +31,7 @@ for e in range(len(sorok)//3):
     lany=sorok[e*3+1]
     fiu=sorok[e*3+2]
     tancok.append(tanc(tancnev, lany, fiu))
-print(tancok)
+#print(tancok)
 
 print("2. feladat: ")
 
@@ -49,6 +49,55 @@ print("Vilma ezekben szerepelt: ")
 for egytanc in tancok:
     if egytanc.isVilma():
         print(egytanc.tanc)
+
+
+
+tancnev = input("kerek egy tancnevet: ")
+
+for e in tancok:
+    if e.lany == "Vilma" and e.tanc == tancnev:
+        print(f"A {tancnev} bemutatóján Vilma párja {e.fiu} volt.")
+        break
+else:
+    print(f"Vilma nem táncolt {tancnev}-t.")
+        
+
+fiu = []
+lany = []
+
+for egytanc in tancok:
+    if egytanc.fiu not in fiu:
+        fiu.append(egytanc.fiu)
+    if egytanc.lany not in lany:
+        lany.append(egytanc.lany)
+        
+
+#print(", ".join(fiu))
+#print(", ".join(lany))
+
+f = open("szereplok.txt","w")
+f.write("Lanyok" + ", ".join(lany) + "\n" + ", ".join(fiu))
+
+f.close()
+
+statfiu = {}
+statlany = {}
+
+for e in fiu:
+    statfiu[e] = 0
+for egytanc in tancok:
+    statfiu[egytanc.fiu] += 1
+
+for e in lany:
+    statlany[e] = 0
+for egytanc in tancok:
+    statlany[egytanc.lany] += 1
+
+print(statfiu)
+print(statlany)
+
+
+
 
 
 
