@@ -1,0 +1,9 @@
+body{
+    background-color: antiquewhite;
+    margin: auto;
+}
+.m{
+    border-color: black;
+    border-style: solid;
+    border-width: 300px 600px ;   
+}
